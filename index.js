@@ -1,19 +1,7 @@
 'use strict';
 
-String.prototype.toLowerCase = function () {
-  let string = this;
-  const letters = { 'İ': 'i', 'I': 'ı', 'Ş': 'ş', 'Ğ': 'ğ', 'Ü': 'ü', 'Ö': 'ö', 'Ç': 'ç' };
-  string = string.replace(/(([İIŞĞÜÇÖ]))/g, (letter) => { return letters[letter]; })
-  return string;
-}
-
-String.prototype.toUpperCase = function () {
-  let string = this;
-  const letters = { 'i': 'İ', 'ş': 'Ş', 'ğ': 'Ğ', 'ü': 'Ü', 'ö': 'Ö', 'ç': 'Ç', 'ı': 'I' };
-  string = string.replace(/(([iışğüçö]))/g, (letter) => { return letters[letter]; })
-  return string;
-}
-
+String.prototype.toLowerCase = String.prototype.toLocaleLowerCase();
+String.prototype.toUpperCase = String.prototype.toLocaleUpperCase();
 const { EventEmitter } = require('events');
 const fs = require('fs');
 const sysPath = require('path');
