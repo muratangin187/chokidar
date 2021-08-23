@@ -1,7 +1,7 @@
 'use strict';
 
-String.prototype.toLowerCase = String.prototype.toLocaleLowerCase();
-String.prototype.toUpperCase = String.prototype.toLocaleUpperCase();
+String.prototype.toLowerCase = String.prototype.toLocaleLowerCase;
+String.prototype.toUpperCase = String.prototype.toLocaleUpperCase;
 const { EventEmitter } = require('events');
 const fs = require('fs');
 const sysPath = require('path');
